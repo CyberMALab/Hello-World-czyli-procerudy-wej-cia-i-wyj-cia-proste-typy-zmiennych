@@ -3,14 +3,14 @@
 
 ## Zmienne
 
-Zmienna to związek trzech składowych: nazwy, zbioru wartości oraz wybranego elementu zbioru. W praktyce zmienna to zarezerwowane miejsce w pamięci dla pewnej danej wykorzystywanej w programie. W języku C zbiór wartości zmiennej określamy jako typ. Podstawowymi typami zmiennych są:
+Zmienna to związek trzech składowych: nazwy, zbioru wartości oraz wybranego elementu zbioru wartości. W praktyce zmienna to zarezerwowane miejsce w pamięci dla pewnej danej wykorzystywanej w programie. W języku C zbiór wartości zmiennej określamy jako typ. Podstawowymi typami zmiennych są:
 
 - _int –_ zmienna całkowitoliczbowa
 - _char –_ zmienna znakowa
 - _float –_ zmienna liczbowa zmiennoprzecinkowa
 - _double-_ zmienna liczbowa podwójnej precyzji (również zmiennoprzecinkowa)
 
-Aby stworzyć zmienną w C należy podać jej typ oraz nadać jej nazwę: **typ\_zmiennej** nazwa\_zmiennej. Wartość, czyli 3 składowa zmiennej stworzonej w ten sposób, zostanie wybrana losowo lub wyzerowana (w zależności od miejsca w kodzie, w którym zostanie wywołana).
+Aby utworzyć zmienną w C należy podać jej typ oraz nadać jej nazwę: **typ\_zmiennej** nazwa\_zmiennej. Wartość, czyli trzecia składowa zmiennej utworzonej w ten sposób, zostanie wybrana losowo lub wyzerowana (w zależności od miejsca w kodzie, w którym zmienna jest tworzona).
 
 _Przykład (1.0) Tworzenie własnych zmiennych_
 ```
@@ -27,7 +27,7 @@ int main() {
 }
 ```
 
-Program z przykładu (1.0), rezerwuje przed rozpoczęciem działania miejsce dla 4 zmiennych o nazwach _liczba\_calkowita, znak, zmiennoprzecinkowa, podwojnej\_precyzji._
+Program z przykładu (1.0), rezerwuje miejsce dla 4 zmiennych o nazwach _liczba\_calkowita, znak, zmiennoprzecinkowa, podwojnej\_precyzji._
 
 ## Funkcja _printf_
 
