@@ -111,7 +111,7 @@ int main() {
 }
 ```
 
-Po skompilowaniu programu, nie wyświetla się nic, ale program się też nie zakańcza. Migający kursor świadczy jednak o tym, że program czeka na podanie zmiennej przez użytkownika. Po wpisaniu liczby całkowitej, program się kończy a podana przez nas liczba została zapisana do zmiennej. Można to sprawdzić wprowadzając drobne zmiany w przykładzie – wyświetlić wartość zmiennej przed wykonaniem pobrania od użytkownika oraz po pobraniu. Dobrą praktyką jest również podawanie komunikatów na temat tego, jakiego typu zmiennej oczekujemy w _scanf_.
+Po skompilowaniu programu, nie wyświetla się nic, ale program się też nie zakańcza. Migający kursor świadczy jednak o tym, że program czeka na podanie zmiennej przez użytkownika. Po wpisaniu liczby całkowitej, program się kończy a podana przez nas liczba zostaje zapisana do zmiennej. Można to sprawdzić wprowadzając drobne zmiany w przykładzie – wyświetlić wartość zmiennej przed wykonaniem pobrania od użytkownika oraz po pobraniu. Dobrą praktyką jest również podawanie komunikatów na temat tego, jakiego typu zmiennej oczekujemy w _scanf_.
 
 _Przykład (1.5) Pobieranie wartości za pomocą scanf - dowód_
 ```
@@ -159,7 +159,7 @@ Wewnątrz tekstu sterującego przydają się też różnego rodzaju znaki specja
 - \n – znak nowej linii
 - \t – tabulacja pozioma
 
-Użycie któregoś ze znaków specjalnych wewnątrz ciągu do wyświetlenia, spowoduje wykonanie „wykonanie&quot; tego znaku, czyli przejście do linii lub zrobienie tabulacji. Zauważamy, że jest problem, kiedy chcemy wyświetlić znak ukośnika &#39;\ &#39; , aby tego dokonać należy użyć podwójnego ukośnika &#39; \\ &#39;. To samo tyczy się znaku &#39;%&#39; który przeznaczony jest dla kodów formatujących. Aby wypisać znak &#39;%&#39; używamy zapisu podwójnego znaku &#39;%%&#39;.
+Użycie któregoś ze znaków specjalnych wewnątrz ciągu do wyświetlenia, spowoduje „wykonanie&quot; tego znaku, czyli przejście do linii lub zrobienie tabulacji. Zauważamy, że jest problem, kiedy chcemy wyświetlić znak ukośnika &#39;\ &#39; , aby tego dokonać należy użyć podwójnego ukośnika &#39; \\\ &#39;. To samo tyczy się znaku &#39;%&#39; który przeznaczony jest dla kodów formatujących. Aby wypisać znak &#39;%&#39; używamy zapisu podwójnego znaku &#39;%%&#39;.
 
 Dla lepszego wyglądu wyświetlenia lub poprawienia czytelności wyników, wyświetlanie zmiennych można sformatować. Aby to zrobić należy zmodyfikować kody formatujące poprzez dodanie odpowiedniego zapisu między znakiem &#39;%&#39; a oznaczeniem (literą) formatu. W przypadku formatowania liczb całkowitych (int) pomiędzy znak &#39;%&#39; a literę &#39;d&#39; można wstawić liczbę. Taki zapis spowoduje, że każdorazowe wyświetlenie liczby zarezerwuje miejsce przynajmniej dla 3 cyfr.
 
@@ -197,6 +197,7 @@ int main() {
 W celu sformatowania wyświetlania liczb zmiennoprzecinkowych (float lub double), pomiędzy znak &#39;%&#39; a znaki &#39;f&#39; lub &#39;lf&#39; można wstawić liczbę całkowitą, działającą w ten sam sposób co dla liczb całkowitych jednak w tym przypadku można dodać jeszcze część niecałkowitą (po przecinku), gdzie liczba znajdująca się po operatorze kropki (w języku C używa się kropki zamiast przecinka), oznacza liczbę miejsc po przecinku, które mają zostać wyświetlone.
 
 _Przykład (1.8) Formatowanie wyświetlania liczb zmiennoprzecinkowych_
+
 Bez formatowania 
 
 ```
