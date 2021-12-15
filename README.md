@@ -161,7 +161,7 @@ Wewnątrz tekstu sterującego przydają się też różnego rodzaju znaki specja
 
 Użycie któregoś ze znaków specjalnych wewnątrz ciągu do wyświetlenia, spowoduje „wykonanie&quot; tego znaku, czyli przejście do linii lub zrobienie tabulacji. Zauważamy, że jest problem, kiedy chcemy wyświetlić znak ukośnika &#39;\ &#39; , aby tego dokonać należy użyć podwójnego ukośnika &#39; \\\ &#39;. To samo tyczy się znaku &#39;%&#39; który przeznaczony jest dla kodów formatujących. Aby wypisać znak &#39;%&#39; używamy zapisu podwójnego znaku &#39;%%&#39;.
 
-Dla lepszego wyglądu wyświetlenia lub poprawienia czytelności wyników, wyświetlanie zmiennych można sformatować. Aby to zrobić należy zmodyfikować kody formatujące poprzez dodanie odpowiedniego zapisu między znakiem &#39;%&#39; a oznaczeniem (literą) formatu. W przypadku formatowania liczb całkowitych (int) pomiędzy znak &#39;%&#39; a literę &#39;d&#39; można wstawić liczbę. Taki zapis spowoduje, że każdorazowe wyświetlenie liczby zarezerwuje miejsce przynajmniej dla 3 cyfr.
+Dla lepszego wyglądu wyświetlenia lub poprawienia czytelności wyników, wyświetlanie zmiennych można sformatować. Aby to zrobić należy zmodyfikować kody formatujące poprzez dodanie odpowiedniego zapisu między znakiem &#39;%&#39; a oznaczeniem (literą) formatu. W przypadku formatowania liczb całkowitych (int) pomiędzy znak &#39;%&#39; a literę &#39;d&#39; można wstawić liczbę. Taki zapis spowoduje, że każdorazowe wyświetlenie zmiennej zarezerwuje miejsce dla tylu cyfr, ile zostanie wskazane w kodzie formatującym.
 
 _Przykład (1.7) Formatowanie wyświetlania liczb całkowitych_
 
