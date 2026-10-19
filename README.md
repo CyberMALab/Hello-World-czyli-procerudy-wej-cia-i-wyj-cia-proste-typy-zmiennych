@@ -10,7 +10,7 @@ Zmienna to związek trzech składowych: nazwy, zbioru wartości oraz wybranego e
 - _float –_ zmienna liczbowa zmiennoprzecinkowa
 - _double-_ zmienna liczbowa podwójnej precyzji (również zmiennoprzecinkowa)
 
-Aby utworzyć zmienną w C należy podać jej typ oraz nadać jej nazwę: **typ\_zmiennej** nazwa\_zmiennej. Wartość, czyli trzecia składowa zmiennej utworzonej w ten sposób, zostanie wybrana losowo lub wyzerowana (w zależności od miejsca w kodzie, w którym zmienna jest tworzona).
+Aby utworzyć zmienną w C należy podać jej typ oraz nadać jej nazwę: **typ\_zmiennej** nazwa\_zmiennej. Zmienna utworzona w ten sposób może mieć wartość losową (niezdefiniowaną) lub wyzerowaną, w zależności od miejsca w kodzie, w którym ją utworzono.
 
 _Przykład (1.0) Tworzenie własnych zmiennych_
 ```
@@ -52,10 +52,9 @@ Za pomocą funkcji _printf_ można również wyświetlić wartość zmiennej. Ab
 
 - %d - zmienna całkowitoliczbowa (int),
 - %c – zmienna znakowa (char),
-- %f – zmienna liczbowa zmiennoprzecinkowa (float),
-- %lf – zmienna liczbowa podwójnej precyzji (double).
+- %f – zmienna liczbowa zmiennoprzecinkowa (float lub double).
 
-Kod formatujący powinien odpowiadać typowi wyświetlanej zmiennej – nie jest to regułą, jednak dla ułatwienia na początku najlepiej używać kodów formatujących zgodnie z typem zmiennej, którą chcemy wyświetlić.
+Kod formatujący musi odpowiadać typowi wyświetlanej wartości. W funkcji _printf_ wartości typu _float_ są przekazywane jako _double_, dlatego dla obu typów używamy `%f`. Przy wczytywaniu funkcją _scanf_ używamy `%f` dla zmiennej _float_ oraz `%lf` dla zmiennej _double_.
 
 _Przykład (1.2) Wyświetlanie zmiennej za pomocą printf_
 ```
@@ -194,7 +193,7 @@ int main() {
 }
 ```
 
-W celu sformatowania wyświetlania liczb zmiennoprzecinkowych (float lub double), pomiędzy znak &#39;%&#39; a znaki &#39;f&#39; lub &#39;lf&#39; można wstawić liczbę całkowitą, działającą w ten sam sposób co dla liczb całkowitych jednak w tym przypadku można dodać jeszcze część niecałkowitą (po przecinku), gdzie liczba znajdująca się po operatorze kropki (w języku C używa się kropki zamiast przecinka), oznacza liczbę miejsc po przecinku, które mają zostać wyświetlone.
+W celu sformatowania wyświetlania liczb zmiennoprzecinkowych (float lub double), pomiędzy znak &#39;%&#39; a znak &#39;f&#39; można wstawić liczbę całkowitą określającą szerokość pola. Można także dodać kropkę i liczbę oznaczającą liczbę miejsc po przecinku, które mają zostać wyświetlone.
 
 _Przykład (1.8) Formatowanie wyświetlania liczb zmiennoprzecinkowych_
 
@@ -246,13 +245,12 @@ _Przykład (1.10) Formatowanie wyświetlania zmiennych typu float_
 #include <stdio.h> 
 
 int main() { 
-   flaot PI=3.14159265359;
+   float PI=3.14159265359;
 /* te liczby zarezerwują 7 miejsc na wyświetlenie w konsoli */ 
    printf(".2f = %7.2f\n", PI); /* po przecinku wyświetli 2 miejsca*/
    printf(".3f = %7.3f\n", PI); /* po przecinku wyświetli 3 miejsca*/
    printf(".5f = %7.5f\n", PI); /* po przecinku wyświetli 5 miejsc*/
-
-
+   return 0;
 } 
 ```
 
