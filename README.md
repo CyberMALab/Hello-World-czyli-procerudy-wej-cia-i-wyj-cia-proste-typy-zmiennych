@@ -260,6 +260,8 @@ int main() {
 
 1. Napisz program, który wyczyta jedną liczbę zmiennoprzecinkową, i wyświetl ją z dokładnością do 1,3,5 miejsc po przecinku. Wczytywanie poprzedź odpowiednim komunikatem.
 
+1. Wczytaj pierwszą literę imienia (`char`) i wiek (`int`), po czym wypisz jedną linię w formacie `Inicjal: A, wiek: 20`. Użyj zmiennych, `scanf` i `printf`.
+
 ***
 [Poprzednia część](https://github.com/CyberMALab/Wprowadzenie-do-programowania-w-j-zyku-ANSI-C.git) | [Spis treści](https://github.com/CyberMALab/Wprowadzenie-do-programowania-w-j-zyku-ANSI-C.git) | [Następna część](https://github.com/CyberMALab/Operatory-arytmetyczne.git)
 ***
